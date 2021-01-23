@@ -4,6 +4,7 @@ A website that can compare the price of a product from different resources (Tiki
 - System Design
 - Software Principle
 - Project structure & application configuration
+- ERD Diagram
 - How to run application
 - API Document
 
@@ -76,9 +77,11 @@ The SOLID Principles are five principles of Object-Oriented class design. They a
 | postgre           | 5434          |
 | mongo             | 27017         |
 | redis             | 6379          |
+| rabbitmq          | 15672         |
 
 
 
+![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/smart_choice_structure.jpg?raw=true)
 ##### Entities Layer (domain module)
 The layer that describes the universal behavior of a thing that can be used across all applications. This can be as simple as a data structure, to a class with methods and behavior - as long as that behavior is the same regardless of what application it is injected in.
 
@@ -87,8 +90,45 @@ The layer that contains application specific business rules, where you can defin
 
 ##### Interface Adapter Layer (Rest, Lookup, Repository module)
 The layer which implements various interfaces define in the use case layer. As we outer layers, we start to move towards more high level systems, utilizing frameworks to implement a lot of the heavy lifting for our functionality, without tying us into a specific solution. This is great that we separate out this into its own layer because in the event we change the structure of our data, it won't have a large affect on the structure of the application itself.
+- rest: handles incoming HTTP requests, invoke approriate use-case and send response back to the caller.
+- repository: contains configuration and business logic to manipulate with database.
+- lookup: make request to external resource for getting data.
 
 ##### Configuration Layer (configuration module)
 The layer that brings all of the code components together and exposes them for usage. This is where you'll be asserting how the system should work from a technical point of view. This would be the layer in which you would apply your dependency injection to wire up your code.
 
 
+### ERD Diagram
+![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/smart_choice_class.jpg?raw=true)
+*Note: For this assignment, I simplify the schema to one table(Product table) in product-service.
+
+
+### How to run the application
+- Install JDK 11.
+- Install Docker.
+- Install Maven.
+- Clone the smart_choice repository
+- Open terminal, navigate into the root directory of this project and run command: "docker-compose up"
+- Configuration RabbitMQ
+  - Go to: http://localhost:15672/ and login with account: rabbitmq/rabbitmq
+  ![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/rabbitmq_login.jpg?raw=true)
+  - Add a new Queue
+  ![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/rabbitmq_queue.jpg?raw=true)
+  - Add a new Exchange
+  ![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/rabbitmq_exchange.jpg?raw=true)
+  - Add binding to queue
+  ![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/rabbitmq_binding.jpg?raw=true)
+
+- Run services: (note: make sure starting discovery-service at first)
+  - discovery-service, audit-service, gateway-service, sandbox-service: mvn clean install && java -jar target/<service-name>-1.0.0.jar
+  - product-service, crawler-service: mvn clean install && java -jar configuration/target/configuration-1.0.0.jar
+
+### API Document
+- Searching product by name: (iphone, vinfast, shoe)
+  - curl --location --request GET 'http://localhost:8080/customers/user001/products/search?product-name=iphone' \
+--header 'x-user: user001'
+- Go to product detail:
+  - curl --location --request GET 'http://localhost:8080/customers/user001/products/1202' \
+--header 'x-user: user001' \
+- Get user activities:
+  - curl --location --request GET 'http://localhost:8080/audit/customer-activity'
