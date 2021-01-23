@@ -100,13 +100,14 @@ The layer that brings all of the code components together and exposes them for u
 
 ### ERD Diagram
 ![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/smart_choice_class.jpg?raw=true)
+
 *Note: For this assignment, I simplify the schema to one table(Product table) in product-service.
 
 
 ### How to run the application
-- Install JDK 11.
-- Install Docker.
-- Install Maven.
+- Install [JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- Install [Docker](https://www.docker.com/products/docker-desktop)
+- Install [Maven](https://maven.apache.org/download.cgi?Preferred=ftp://mirror.reverse.net/pub/apache/)
 - Clone the smart_choice repository
 - Open terminal, navigate into the root directory of this project and run command: "docker-compose up"
 - Configuration RabbitMQ
