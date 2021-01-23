@@ -125,11 +125,11 @@ The layer that brings all of the code components together and exposes them for u
   - product-service, crawler-service: mvn clean install && java -jar configuration/target/configuration-1.0.0.jar
 
 ### API Document
-- Searching product by name: (iphone, vinfast, shoe)
-  - curl --location --request GET 'http://localhost:8080/customers/user001/products/search?product-name=iphone' \
+- Searching product by name: (iphone, vinfast, shoe) http://localhost:8080/customers/{customer-id}/products/search?product-name={search-keyword}
+  - example: curl --location --request GET 'http://localhost:8080/customers/user001/products/search?product-name=iphone' \
 --header 'x-user: user001'
-- Go to product detail:
-  - curl --location --request GET 'http://localhost:8080/customers/user001/products/1202' \
---header 'x-user: user001' \
+- Go to product detail: http://localhost:8080/customers/{customer-id}/products/{product-id}
+  - example: curl --location --request GET 'http://localhost:8080/customers/user001/products/1202' \
+--header 'x-user: user001' 
 - Get user activities:
   - curl --location --request GET 'http://localhost:8080/audit/customer-activity'
