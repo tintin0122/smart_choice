@@ -3,7 +3,7 @@ A website that can compare the price of a product from different resources (Tiki
 
 - System Design
 - Software Principle
-- Project structure
+- Project structure & application configuration
 - How to run application
 - API Document
 
@@ -29,6 +29,8 @@ logging all client activities.
 
 ##### Identity Provider
 An identity provider is a service that stores and verifies user identity. (e.g: Keycloak)
+
+
 
 
 ### Software Principle
@@ -58,4 +60,35 @@ The SOLID Principles are five principles of Object-Oriented class design. They a
 * The Liskov Substitution Principle (L): Subclasses should be substitutable for their base classes.
 * The Interface Segregation Principle (I): Keeping things separated, and the Interface Segregation Principle is about separating the interfaces.
 * The Dependency Inversion Principle (D): Our classes should depend upon interfaces or abstract classes instead of concrete classes and functions.
+
+
+
+
+### Project structure & application configuration
+| application       | Port          |
+| ------------------| ------------- |
+| audit-service     | 8082          |
+| crawler-service   | 8083          |
+| discovery-service | 8761          |
+| gateway-service   | 8080          |
+| product-service   | 8081          |
+| sandbox-service   | 8180          |
+| postgre           | 5434          |
+| mongo             | 27017         |
+| redis             | 6379          |
+
+
+
+##### Entities Layer (domain module)
+The layer that describes the universal behavior of a thing that can be used across all applications. This can be as simple as a data structure, to a class with methods and behavior - as long as that behavior is the same regardless of what application it is injected in.
+
+##### Use Cases Layer(usecase module)
+The layer that contains application specific business rules, where you can define how your application interacts with the entities layer. This defines business processes and workflows. Depends on entities layer, but also defines various contracts that will be implemented by external layers.
+
+##### Interface Adapter Layer (Rest, Lookup, Repository module)
+The layer which implements various interfaces define in the use case layer. As we outer layers, we start to move towards more high level systems, utilizing frameworks to implement a lot of the heavy lifting for our functionality, without tying us into a specific solution. This is great that we separate out this into its own layer because in the event we change the structure of our data, it won't have a large affect on the structure of the application itself.
+
+##### Configuration Layer (configuration module)
+The layer that brings all of the code components together and exposes them for usage. This is where you'll be asserting how the system should work from a technical point of view. This would be the layer in which you would apply your dependency injection to wire up your code.
+
 
