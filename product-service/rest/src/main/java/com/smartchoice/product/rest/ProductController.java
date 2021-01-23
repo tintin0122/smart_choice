@@ -19,17 +19,17 @@ public class ProductController {
 
   @Autowired private CompareProductUseCase compareProductUseCase;
 
-  @GetMapping("/api/v1/customers/{customer-name}/products/{product-id}")
+  @GetMapping("/api/v1/customers/{customer-id}/products/{product-id}")
   public ResponseEntity<Product> getProductDetail(
-      @PathVariable("customer-name") String customerId,
+      @PathVariable("customer-id") String customerId,
       @PathVariable("product-id") String productId) {
 
     return ResponseEntity.ok(productDetailUseCase.getProductDetail(customerId, productId));
   }
 
-  @GetMapping("/api/v1/customers/{customer-name}/search")
+  @GetMapping("/api/v1/customers/{customer-id}/products/search")
   public ResponseEntity<List<Product>> searchProduct(
-      @PathVariable("customer-name") String customerId,
+      @PathVariable("customer-id") String customerId,
       @RequestParam("product-name") String productName) {
 
     return ResponseEntity.ok(compareProductUseCase.searchProductByName(customerId, productName));
