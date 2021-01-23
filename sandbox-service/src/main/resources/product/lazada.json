@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1001,
+    "productName": "iphone 12 pro max",
+    "shop": "LAZADA",
+    "information": "sample test for iphone 12 pro max",
+    "url": "https://www.google.com/",
+    "title": "iphone 12 pro max",
+    "price": 25000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1002,
+    "productName": "iphone 12 pro",
+    "shop": "LAZADA",
+    "information": "sample test for iphone 12 pro",
+    "url": "https://www.google.com/",
+    "title": "iphone 12 pro",
+    "price": 21000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1003,
+    "productName": "vinfast fadil",
+    "shop": "LAZADA",
+    "information": "sample test for vinfast fadil",
+    "url": "https://www.google.com/",
+    "title": "vinfast fadil",
+    "price": 310000000.0,
+    "discount": 10.0
+  },
+  {
+    "id": 1004,
+    "productName": "vinfast lux",
+    "shop": "LAZADA",
+    "information": "sample test for vinfast lux",
+    "url": "https://www.google.com/",
+    "title": "vinfast lux",
+    "price": 910000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1005,
+    "productName": "nike sneaker shoes",
+    "shop": "LAZADA",
+    "information": "sample test for nike sneaker shoes",
+    "url": "https://www.google.com/",
+    "title": "nike sneaker shoes",
+    "price": 1000000.0,
+    "discount": 5.0
+  },
+  {
+    "id": 1006,
+    "productName": "nike football fusal shoes",
+    "shop": "LAZADA",
+    "information": "sample test for nike football fusal shoes",
+    "url": "https://www.google.com/",
+    "title": "nike football fusal shoes",
+    "price": 2000000.0,
+    "discount": 25.0
+  },
+  {
+    "id": 1007,
+    "productName": "rolex watch",
+    "shop": "LAZADA",
+    "information": "sample test for rolex watch",
+    "url": "https://www.google.com/",
+    "title": "rolex watch",
+    "price": 200000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1008,
+    "productName": "tissot watch",
+    "shop": "LAZADA",
+    "information": "sample test for tissot watch",
+    "url": "https://www.google.com/",
+    "title": "tissot watch",
+    "price": 20000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1008,
+    "productName": "apple watch",
+    "shop": "LAZADA",
+    "information": "sample test for apple watch",
+    "url": "https://www.google.com/",
+    "title": "apple watch",
+    "price": 12000000.0,
+    "discount": 0.0
+  }
+]

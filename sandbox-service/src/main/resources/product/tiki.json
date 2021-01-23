@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1101,
+    "productName": "iphone 12 pro max",
+    "shop": "TIKI",
+    "information": "sample test for iphone 12 pro max",
+    "url": "https://www.google.com/",
+    "title": "iphone 12 pro max",
+    "price": 25000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1102,
+    "productName": "iphone 12 pro",
+    "shop": "TIKI",
+    "information": "sample test for iphone 12 pro",
+    "url": "https://www.google.com/",
+    "title": "iphone 12 pro",
+    "price": 21100000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1103,
+    "productName": "vinfast fadil",
+    "shop": "TIKI",
+    "information": "sample test for vinfast fadil",
+    "url": "https://www.google.com/",
+    "title": "vinfast fadil",
+    "price": 311000000.0,
+    "discount": 11.0
+  },
+  {
+    "id": 1104,
+    "productName": "vinfast lux",
+    "shop": "TIKI",
+    "information": "sample test for vinfast lux",
+    "url": "https://www.google.com/",
+    "title": "vinfast lux",
+    "price": 911000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1105,
+    "productName": "nike sneaker shoes",
+    "shop": "TIKI",
+    "information": "sample test for nike sneaker shoes",
+    "url": "https://www.google.com/",
+    "title": "nike sneaker shoes",
+    "price": 1100000.0,
+    "discount": 5.0
+  },
+  {
+    "id": 1106,
+    "productName": "nike football fusal shoes",
+    "shop": "TIKI",
+    "information": "sample test for nike football fusal shoes",
+    "url": "https://www.google.com/",
+    "title": "nike football fusal shoes",
+    "price": 2000000.0,
+    "discount": 25.0
+  },
+  {
+    "id": 1107,
+    "productName": "rolex watch",
+    "shop": "TIKI",
+    "information": "sample test for rolex watch",
+    "url": "https://www.google.com/",
+    "title": "rolex watch",
+    "price": 200000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1108,
+    "productName": "tissot watch",
+    "shop": "TIKI",
+    "information": "sample test for tissot watch",
+    "url": "https://www.google.com/",
+    "title": "tissot watch",
+    "price": 20000000.0,
+    "discount": 0.0
+  },
+  {
+    "id": 1108,
+    "productName": "apple watch",
+    "shop": "TIKI",
+    "information": "sample test for apple watch",
+    "url": "https://www.google.com/",
+    "title": "apple watch",
+    "price": 12000000.0,
+    "discount": 0.0
+  }
+]
